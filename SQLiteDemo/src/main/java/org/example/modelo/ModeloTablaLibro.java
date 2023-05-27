@@ -113,6 +113,21 @@ public class ModeloTablaLibro implements TableModel {
         }catch (SQLException sqle){
             System.out.println(sqle.getMessage());
         }
+    }
 
+    public boolean agregarLibro(Libro libro){
+        boolean resultado = false;
+        try {
+            if(ldao.insertar(libro)){
+                datos.add(libro);
+                resultado = true;
+            }else{
+                resultado = false;
+            }
+
+        }catch (SQLException sqle){
+            System.out.println(sqle.getMessage());
+        }
+        return resultado;
     }
 }

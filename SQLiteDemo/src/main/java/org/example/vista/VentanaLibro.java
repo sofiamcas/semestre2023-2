@@ -194,4 +194,10 @@ public class VentanaLibro extends JFrame {
     public void setBtnCargar(JButton btnCargar) {
         this.btnCargar = btnCargar;
     }
+
+    public void limpiar(){
+        txtTitulo.setText("");
+        txtAutor.setText("");
+
+    }
 }
